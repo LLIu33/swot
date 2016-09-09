@@ -26,8 +26,8 @@ passport.deserializeUser(authentication.deserializeUser);
 
 // Initialize the app and db
 var app = express();
-var MONGODB_URL = process.env.MONGODB_URL || 'localhost:27017/swot';
-mongoose.connect(MONGODB_URL);
+var MONGODB_URI = process.env.MONGODB_URI || 'localhost:27017/swot';
+mongoose.connect(MONGODB_URI);
 
 // Secrets
 var secret = process.env.SECRET || 'TFVtSsdIekQ7VwjCzgng';
